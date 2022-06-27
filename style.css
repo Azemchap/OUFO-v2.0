@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #0101ff;
+  --color-secondary: #0f0faf;
+  --color-white: #eee;
+  --color-light: #ccc;
+  --color-black: #000;
+  --color-grey: #333;
+
+  --transition: all 800ms ease-in-out;
+
+  --box-shadow: 0 0.6rem 0.6rem rgba(0, 0, 0, 0.6);
+  --box-shadow-light: 0 0.6rem 0.6rem rgba(44, 54, 187, 0.753);
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.08rem;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  object-fit: cover;
+  box-shadow: var(--box-shadow-light);
+}
+
+.ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.header {
+  background-color: var(--color-primary);
+  box-shadow: var(--box-shadow-light);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.menu {
+  width: 40px;
+  display: none;
+  border: 2px solid var(--color-light);
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* HERO SECTION  */
+
+.hero {
+  background-color: var(--color-secondary);
+}
+
+.hero-container {
+  display: flex;
+  gap: 20px;
+  min-height: 80vh;
+  align-items: center;
+  padding: 80px;
+  color: var(--color-white);
+}
+
+.hero-text,
+.hero-img {
+  flex-basis: 50%;
+}
+
+.hero-text h2 {
+  font-size: 64px;
+  line-height: 1.4;
+}
+.hero-text span {
+  display: block;
+}
+.hero-text p {
+  font-size: 24px;
+  color: var(--color-light);
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px 40px;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  font-size: 20px;
+  margin-top: 60px;
+  border: 2px solid var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  
+
+}
+
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+}
+ 
+
+.hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-img img {
+  max-width: 80%;
+}
+
+/* STORY SECTION  */
+
+.story {
+  background-color: var(--color-light);
+}
+
+.story-container {
+  display: flex;
+  min-height: 50vh;
+  color: var(--color-secondary);
+  gap: 80px;
+  padding: 80px;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--color-secondary);
+  font-weight: 600;
+  position: relative;
+  font-size: 16px;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--color-secondary);
+  bottom: -5px;
+  left: 0;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+i {
+  font-size: 4px;
+  color: var(--color-secondary);
+  margin-left: 200px;
+}
+
+.story-left,
+.story-right {
+  flex-basis: 50%;
+}
+
+.story-left {
+  align-self: flex-end;
+}
+
+.story-right {
+  align-self: flex-start;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-text h2 {
+    font-size: 40px;
+  }
+  .hero-text p {
+    padding: 20px;
+    font-size: 16px;
+  }
+  .hero-img img {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .story-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .hero-text {
+    padding-top: 40px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-img img {
+    max-width: 100%;
+  }
+
+  .hero-text a {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .hero-text h2 {
+    font-size: 8vw;
+  }
+
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .ul {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    gap: 0;
+  }
+
+  .active {
+    display: block;
+  }
+
+  li {
+    width: 100%;
+  }
+
+  .ul li a {
+    display: block;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .ul li a:hover {
+    color: var(--color-secondary);
+    background-color: var(--color-white);
+    border-radius: 4px;
+  }
+
+  .menu {
+    display: block;
+  }
+}
