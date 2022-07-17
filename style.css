@@ -206,6 +206,7 @@ i {
 .story-right {
   flex-basis: 50%;
 }
+
 .story-left {
   padding-top: 200px;
 }
@@ -225,7 +226,6 @@ i {
   .hero-img img {
     max-width: 90%;
   }
-
   .story-left {
     padding-top: 100px;
   }
@@ -237,8 +237,11 @@ i {
     padding: 20px;
   }
 
-  .story-right {
+  .story-left {
     padding-top: 20px;
+  }
+  .story-right {
+    padding-top: 60px;
   }
 
   .hero-text {
