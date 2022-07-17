@@ -205,9 +205,8 @@ i {
 .story-right {
   flex-basis: 50%;
 }
-
 .story-left {
-  align-self: flex-end;
+  padding-top: 200px;
 }
 
 .story-right {
@@ -245,10 +244,6 @@ i {
   .hero-text a {
     display: block;
     margin-bottom: 40px;
-  }
-
-  .hero-text h2 {
-    font-size: 24px;
   }
 
   .hero-container {
