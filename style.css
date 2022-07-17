@@ -225,6 +225,10 @@ i {
   .hero-img img {
     max-width: 90%;
   }
+
+  .story-left {
+    padding-top: 100px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -232,6 +236,11 @@ i {
     flex-direction: column;
     padding: 20px;
   }
+
+  .story-left {
+    padding-top: 0;
+  }
+
   .hero-text {
     padding-top: 20px;
     justify-content: center;
